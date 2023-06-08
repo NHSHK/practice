@@ -1,0 +1,23 @@
+@import url(./reset.css);
+
+body {
+  background-color: #111111;
+}
+#main-img-wrapper {
+  text-align: center;
+  padding-top: 140px;
+}
+#intro-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 350px;
+  margin: 54px auto 0;
+  color: #ffffff;
+  font-size: 40px;
+  font-weight: 500;
+  gap: 20px;
+}
+#intro-main p {
+  text-align: center;
+}
