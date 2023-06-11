@@ -79,3 +79,8 @@ body {
   height: 310px;
   transform: translate(200px, -30px);
 }
+#video {
+  display: block;
+  margin: 0 auto;
+  width: 600px;
+}

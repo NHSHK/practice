@@ -8,6 +8,30 @@ const division =
 const panel1Img = document.getElementById("panel1-img");
 const flyingSantaImg = document.getElementById("flying-santa-img");
 
+const videoPlayBack = 50;
+const videoElement = document.getElementById("video");
+
+function centerElement(elementId) {
+  const element = document.getElementById(elementId);
+  const parent = element.parentElement;
+
+  if (
+    window.scrollY >
+    parent.offsetTop -
+      (document.documentElement.clientHeight - element.offsetHeight) / 2
+  ) {
+    element.style.position = "fixed";
+    element.style.top = "50%";
+    element.style.left = "50%";
+    element.style.transform = "translate(-50%, -50%)";
+  } else {
+    element.style.position = "initial";
+    element.style.top = "initial";
+    element.style.left = "initial";
+    element.style.transform = "initial";
+  }
+}
+
 window.addEventListener("scroll", () => {
   if (document.getElementById("on"))
     document.getElementById("on").removeAttribute("id");
@@ -19,7 +43,6 @@ window.addEventListener("scroll", () => {
     const targetIndex = Math.floor(
       (window.scrollY - listStyleChangeStartY) / division
     );
-    console.log(targetIndex);
     if (listItems[targetIndex]) listItems[targetIndex].id = "on";
   }
 
@@ -40,4 +63,11 @@ window.addEventListener("scroll", () => {
 
     flyingSantaImg.style.transform = `translate(${translateX}px, ${translateY}px) rotate(${rotationDegree}deg)`;
   }
+
+  videoElement.addEventListener("loadedmetadata", () => {
+    document.getElementById("video-section").style.height =
+      videoElement.duration * videoPlayBack + "px";
+  });
+
+  centerElement("fixed-wrapper");
 });
