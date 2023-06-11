@@ -46,7 +46,7 @@ body {
 }
 #list-item-wrapper {
   width: 383px;
-  margin: 0 auto 500px;
+  margin: 0 auto;
 }
 .list-item {
   display: inline;
@@ -66,4 +66,16 @@ body {
 }
 .list-item#on::before {
   background-image: url(../img/light_house.png);
+}
+#panel1-img {
+  position: relative;
+  padding: 100px 0;
+  height: 340px;
+  overflow: hidden;
+}
+#flying-santa-img {
+  position: absolute;
+  right: 0px;
+  height: 310px;
+  transform: translate(200px, -30px);
 }
