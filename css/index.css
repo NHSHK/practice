@@ -79,8 +79,20 @@ body {
   height: 310px;
   transform: translate(200px, -30px);
 }
+#video-section {
+  margin-bottom: 1000px;
+}
 #video {
   display: block;
   margin: 0 auto;
   width: 600px;
+}
+#fixed-discription {
+  margin: 30px auto 0;
+  color: #ffffff;
+  text-align: right;
+  line-height: 50px;
+  width: 605px;
+  font-size: 25px;
+  font-weight: 600;
 }
